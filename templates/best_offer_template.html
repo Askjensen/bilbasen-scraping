@@ -1,0 +1,46 @@
+{% extends "base_template.html" %}
+{% block content %}
+<div id="content">
+    <h1>Get the best offer for a particular model</h1>
+    <p>Enter car model below to get the best offer:</p>
+    <form action="best_offer" method="post">
+        <table summary="">
+            <tbody>
+                <tr>
+                    <th>
+                        <input type="text" name="model"/>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" value="Get best offer" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    {% if show == 'True' %}
+        <img src="/img/regression.png"/>
+        <h3>Best offer for a  {{model_search}}: </h3>
+        <div id="best_offer_left">
+            <h4>{{model}}</h4>
+            <h5>Price: {{price}} DKK <br> Predicted price: {{predicted_price}} DKK
+                <br>  <font color="green">SAVING: {{saving}} DKK</font> </h5>
+            <h5>From: {{year}}</h4>
+            <h5>Kilometers done: {{kms}} km</h5>
+            <h5>Sale location: {{location}}</h5>
+            <h5>Description: </h5>
+            <p>{{description}}</p>
+            <h5>See more  <a href="{{link}}">HERE</a> </h5>
+            
+
+        </div>
+        <div id="best_offer_right">
+            <img src={{pic}} >
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}
