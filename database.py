@@ -13,7 +13,7 @@ def connect_to_database():
     cur -- a MySQLdb cursor
     con -- a connection to the database
     """
-    con = mdb.connect(host='localhost',user='aelj', passwd='TineWedel4', db='bilbasendb',charset='utf8')
+    con = mdb.connect(host='localhost',user='user', passwd='pass', db='bilbasendb',charset='utf8')
 #    con.set_character_set('utf8')
 #    cur = con.cursor()
 #    cur.execute("DROP DATABASE IF EXISTS bilbasendb")
@@ -22,7 +22,7 @@ def connect_to_database():
 #    cur.execute("CREATE USER 'user'@'localhost' IDENTIFIED BY 'bilbasen'")
 #    cur.execute("GRANT ALL ON bilbasendb.* TO 'aelj'@'localhost'")
   #  con = mdb.connect(
-   #    'localhost','aelj','TineWedel4', 'bilbasendb', charset='utf8')
+   #    'localhost','','', 'bilbasendb', charset='utf8')
     con.set_character_set('utf8')
     cur = con.cursor()
     cur.execute('SET NAMES utf8;')
